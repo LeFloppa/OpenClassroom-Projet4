@@ -261,6 +261,9 @@ main {
   font-family: "Shrikhand";
   font-size: 26px;
 }
+.menu--la-note-enchantee {
+  height: 1170px;
+}
 
 /* Starter */
 .starter, .dessert, .dish {
@@ -277,6 +280,9 @@ main {
   width: 100%;
   font-size: 16px;
   font-weight: 300;
+}
+.starter--la-note-enchantee {
+  height: 320px;
 }
 
 .border {

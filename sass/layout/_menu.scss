@@ -43,6 +43,10 @@ main{
         font-family: $font-title;
         font-size: 26px;
     }
+
+    &--la-note-enchantee{
+        height: 1170px;
+    }
 }
 
 /* Starter */
@@ -61,6 +65,10 @@ main{
         width: 100%;
         font-size: 16px;
         font-weight: 300;
+    }
+
+    &--la-note-enchantee{
+        height: 320px;
     }
 }
 
