@@ -1,0 +1,142 @@
+main{
+    width: 100%;
+}
+
+/* Background */
+
+.background{
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+
+    &__image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Menu */
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    position: relative;
+    width: 100%;
+    max-width: 1055px;
+    height: 1100px;
+    background-color: darken(#ffffff, 3.53);
+    border-radius: 30px 30px 0 0;
+    padding: 20px 20px 50px;
+    margin: -55px auto 0 auto;
+
+    &__title{
+        display: inline-flex;
+        width: 307px;
+        margin: 30px auto 0;
+    }
+
+    & h1{
+        width: 90%;
+        font-family: $font-title;
+        font-size: 26px;
+    }
+}
+
+/* Starter */
+
+.starter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 100%;
+    max-width: 634px;
+    margin: auto;
+    height: 250px;
+
+    & h2{
+        width: 100%;
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+
+.border{
+    position: relative;
+    width: 40px;
+    border-top: solid $tertiary;
+    bottom: 3px;
+}
+
+/* Cards */
+
+.menu-card{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    width: 100%;
+    height: 65px;
+    border-radius: 20px;
+    box-shadow: 4px 3px 15px darken(#ffffff, 10);
+    overflow: hidden;
+
+    & .plate{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        height: 55px;
+        margin: 10px;
+
+        & h3{
+            width: 85%;
+            font-weight: 700;
+            font-size: 16px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        &__details{
+            width: 85%;
+            height: 25px;
+            font-weight: 300;
+            font-size: 14px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        &__price{
+            width: 10%;
+            font-weight: 700;
+            font-size: 15px;
+        }
+    }
+}
+        
+/* Dish, desserts and command button */
+
+.dish{
+    @extend .starter;
+}
+
+.dessert{
+    @extend .starter;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+
+    & .btn{
+        text-align: center;
+        width: 200px;
+        margin: 0;
+    }
+}

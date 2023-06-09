@@ -1,0 +1,127 @@
+.recherche {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 55px;
+  background-color: darken(#ffffff, 8.24);
+  box-shadow: 0px 1px 3px darken(#ffffff, 35) inset;
+
+  &__formulaire {
+    display: flex;
+    width: 200px;
+    height: 70%;
+
+    &__icone {
+      display: flex;
+      align-items: center;
+      width: 20%;
+      height: 100%;
+
+      & a {
+        & i {
+          font-size: 16px;
+          color: lighten(#000000, 20.78);
+        }
+      }
+    }
+
+    & input[type="text"] {
+      display: flex;
+      align-items: center;
+      width: 80%;
+      height: 100%;
+      font-family: $font-text;
+      font-size: 16px;
+      font-weight: 500;
+      border: none;
+      outline: none;
+      background-color: darken(#ffffff, 8.24);
+    }
+  }
+}
+
+.site-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 40px 30px;
+  background-color: darken(#ffffff, 3.53);
+
+  & h1 {
+    width: 75%;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  & p {
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 400px;
+  padding: 20px;
+
+  & h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 20px 0;
+  }
+
+  &__cartes {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    &__etapes {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 25px 0;
+      background-color: darken(#ffffff, 5);
+      border-radius: 20px;
+      box-shadow: 4px 0px 15px darken(#ffffff, 15);
+
+      & span {
+        position: relative;
+        right: 10px;
+      }
+
+      & i {
+        position: relative;
+        color: lighten(#000000, 50);
+        font-size: 19px;
+        align-self: center;
+        margin-left: 10px;
+      }
+    }
+
+    &__description {
+      width: 100%;
+      font-size: 16px;
+      font-weight: 500;
+      margin-left: 40px;
+      align-self: center;
+    }
+
+    &__number {
+      background-color: $primary;
+      padding: 4px 8px;
+      border-radius: 20px;
+      color: #ffffff;
+      align-self: center;
+    }
+  }
+}
