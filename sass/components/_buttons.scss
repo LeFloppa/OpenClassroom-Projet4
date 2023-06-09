@@ -11,4 +11,11 @@ button {
   margin: 40px 0 0;
   border-radius: 30px;
   box-shadow: 4px 3px 10px darken(#ffffff, 25);
+  transition: box-shadow 0.5s, transform 0.5s, opacity 0.5s;
+
+  &:hover{
+    box-shadow: 8px 6px 10px darken(#ffffff, 35);
+    transform: translateY(-1px);
+    opacity: 0.85;
+}
 }

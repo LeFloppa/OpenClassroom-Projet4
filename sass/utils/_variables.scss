@@ -4,6 +4,7 @@ $primary: #9356dc;
 $secondary: #ff79da;
 $tertiary: #99e2d0;
 $btn-color: linear-gradient(to top left, $primary, 55%, $secondary);
+$heart-color: -webkit-linear-gradient(top, $primary, $secondary);
 
 $font-title: "Shrikhand";
 $font-text: "Roboto", sans-serif;
