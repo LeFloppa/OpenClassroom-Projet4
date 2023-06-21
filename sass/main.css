@@ -1,4 +1,88 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap"); /* Heart */
+@keyframes heart {
+  from {
+    background-position-y: 24px;
+    -webkit-text-stroke-width: 1px;
+  }
+  to {
+    background-position-y: 0;
+    -webkit-text-stroke-width: 0px;
+  }
+}
+/* Menus */
+@keyframes plate-selection {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/* Loader */
+.loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeOut 2s linear forwards;
+}
+.loader .loading-text {
+  color: white;
+  margin-top: 15px;
+  font-family: "Shrikhand";
+  font-size: 20px;
+}
+.loader:before {
+  content: "";
+  box-sizing: border-box;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #9356dc;
+  border-right-color: #ff79da;
+  border-bottom-color: #99e2d0;
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeOut {
+  0%, 93% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 *,
 *:before,
 *:after {
@@ -160,12 +244,11 @@ button {
   background-repeat: no-repeat;
   background-position-y: 24px;
   -webkit-text-stroke: 1px #000;
-  animation: heart_out 0.5s linear forwards;
 }
-.like .fa-heart:active {
+.like .fa-heart:hover {
   background-position-y: 0;
   -webkit-text-stroke-width: 0px;
-  animation: heart_in 0.5s linear forwards;
+  animation: heart 0.5s linear forwards;
 }
 
 header {
@@ -261,12 +344,10 @@ main {
   font-family: "Shrikhand";
   font-size: 26px;
 }
-.menu--la-note-enchantee {
-  height: 1170px;
-}
 
 /* Starter */
 .starter, .dessert, .dish {
+  opacity: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -274,15 +355,13 @@ main {
   width: 100%;
   max-width: 634px;
   margin: auto;
-  height: 250px;
+  gap: 10px;
+  animation: apparition 1s forwards;
 }
 .starter h2, .dessert h2, .dish h2 {
   width: 100%;
   font-size: 16px;
   font-weight: 300;
-}
-.starter--la-note-enchantee {
-  height: 320px;
 }
 
 .border {
@@ -333,8 +412,38 @@ main {
   font-weight: 700;
   font-size: 15px;
 }
+.menu-card .plate-selector {
+  height: 100%;
+  line-height: 65px;
+  width: 0%;
+  font-size: 20px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #99e2d0;
+  transition: 0.5s;
+}
+.menu-card:hover > .plate {
+  width: 75%;
+  transition: width 0.5s;
+}
+.menu-card:hover > .plate-selector {
+  width: 17%;
+  transition: width 0.5s;
+  transition-delay: 0.1s;
+}
+.menu-card:hover > .plate-selector > i {
+  animation: plate-selection 0.5s;
+}
 
 /* Dish, desserts and command button */
+.dish {
+  animation: apparition 1s 0.5s forwards;
+}
+
+.dessert {
+  animation: apparition 1s 1s forwards;
+}
+
 .button {
   display: flex;
   justify-content: center;

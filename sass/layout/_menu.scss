@@ -44,14 +44,12 @@ main{
         font-size: 26px;
     }
 
-    &--la-note-enchantee{
-        height: 1170px;
-    }
 }
 
 /* Starter */
 
 .starter{
+    opacity: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -59,16 +57,13 @@ main{
     width: 100%;
     max-width: 634px;
     margin: auto;
-    height: 250px;
+    gap: 10px;
+    animation: apparition 1s forwards;
 
     & h2{
         width: 100%;
         font-size: 16px;
         font-weight: 300;
-    }
-
-    &--la-note-enchantee{
-        height: 320px;
     }
 }
 
@@ -116,6 +111,7 @@ main{
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+
         }
 
         &__price{
@@ -124,16 +120,44 @@ main{
             font-size: 15px;
         }
     }
+
+    & .plate-selector{
+        height: 100%;
+        line-height: 65px;
+        width: 0%;
+        font-size: 20px;
+        text-align: center;
+        color: #ffffff;
+        background-color: $tertiary;
+        transition: 0.5s;
+    }
+    
+    &:hover{
+        & > .plate{
+            width: 75%;
+            transition: width 0.5s;
+        }
+        & > .plate-selector{
+            width: 17%;
+            transition: width 0.5s;
+            transition-delay: 0.1s;
+            & > i{
+            animation: plate-selection 0.5s;
+            }
+        }
+    }
 }
         
 /* Dish, desserts and command button */
 
 .dish{
     @extend .starter;
+    animation: apparition 1s 0.5s forwards;
 }
 
 .dessert{
     @extend .starter;
+    animation: apparition 1s 1s forwards;
 }
 
 .button{
