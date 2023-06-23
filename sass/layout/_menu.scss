@@ -1,174 +1,208 @@
-main{
-    width: 100%;
+main {
+  width: 100%;
 }
 
 /* Background */
 
-.background{
-    width: 100%;
-    height: 270px;
-    overflow: hidden;
+.background {
+  width: 100%;
+  height: 270px;
+  overflow: hidden;
 
-    &__image{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include tablet {
+    height: 321px;
+  }
+
+  @include laptop {
+    height: 372px;
+  }
+
+  @include desktop {
+    height: 423px;
+  }
 }
 
 /* Menu */
 
-.menu{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-between;
-    position: relative;
-    width: 100%;
-    max-width: 1055px;
-    height: 1100px;
-    background-color: darken(#ffffff, 3.53);
-    border-radius: 30px 30px 0 0;
-    padding: 20px 20px 50px;
-    margin: -55px auto 0 auto;
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  position: relative;
+  width: 100%;
+  max-width: 1055px;
+  height: 1100px;
+  background-color: darken(#ffffff, 3.53);
+  border-radius: 30px 30px 0 0;
+  padding: 20px 20px 50px;
+  margin: -55px auto 0 auto;
 
-    &__title{
-        display: inline-flex;
-        width: 307px;
-        margin: 30px auto 0;
+  &__title {
+    display: inline-flex;
+    width: 307px;
+    margin: 30px auto 0;
+
+    @include tablet {
+      width: 42%;
+    }
+  }
+
+  & h1 {
+    width: 90%;
+    font-family: $font-title;
+    font-size: 26px;
+
+    @media screen and (min-width: 350px) {
+      font-size: 28px;
     }
 
-    & h1{
-        width: 90%;
-        font-family: $font-title;
-        font-size: 26px;
+    @include tablet {
+      text-align: center;
     }
 
+    @include laptop {
+      width: 75%;
+    }
+  }
 }
 
 /* Starter */
 
-.starter{
-    opacity: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-between;
-    width: 100%;
-    max-width: 634px;
-    margin: auto;
-    gap: 10px;
-    animation: apparition 1s forwards;
+.starter {
+  opacity: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  width: 100%;
+  max-width: 634px;
+  margin: auto;
+  gap: 10px;
+  animation: apparition 1s forwards;
 
-    & h2{
-        width: 100%;
-        font-size: 16px;
-        font-weight: 300;
-    }
+  & h2 {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 300;
+  }
 }
 
-.border{
-    position: relative;
-    width: 40px;
-    border-top: solid $tertiary;
-    bottom: 3px;
+.border {
+  position: relative;
+  width: 40px;
+  border-top: solid $tertiary;
+  bottom: 3px;
 }
 
 /* Cards */
 
-.menu-card{
+.menu-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  width: 100%;
+  height: 65px;
+  border-radius: 20px;
+  box-shadow: 4px 3px 15px darken(#ffffff, 10);
+  overflow: hidden;
+
+  & .plate {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    background-color: #ffffff;
     width: 100%;
-    height: 65px;
-    border-radius: 20px;
-    box-shadow: 4px 3px 15px darken(#ffffff, 10);
-    overflow: hidden;
+    height: 55px;
+    margin: 10px;
 
-    & .plate{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
-        height: 55px;
-        margin: 10px;
+    & h3 {
+      width: 85%;
+      font-weight: 700;
+      font-size: 16px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
 
-        & h3{
-            width: 85%;
-            font-weight: 700;
-            font-size: 16px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-
-        &__details{
-            width: 85%;
-            height: 25px;
-            font-weight: 300;
-            font-size: 14px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-
-        }
-
-        &__price{
-            width: 10%;
-            font-weight: 700;
-            font-size: 15px;
-        }
+      @media screen and (min-width: 350px) {
+        font-size: 18px;
+      }
     }
 
-    & .plate-selector{
-        height: 100%;
-        line-height: 65px;
-        width: 0%;
-        font-size: 20px;
-        text-align: center;
-        color: #ffffff;
-        background-color: $tertiary;
-        transition: 0.5s;
+    &__details {
+      width: 85%;
+      height: 25px;
+      font-weight: 300;
+      font-size: 14px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      @media screen and (min-width: 350px) {
+        font-size: 15px;
+      }
     }
-    
-    &:hover{
-        & > .plate{
-            width: 75%;
-            transition: width 0.5s;
-        }
-        & > .plate-selector{
-            width: 17%;
-            transition: width 0.5s;
-            transition-delay: 0.1s;
-            & > i{
-            animation: plate-selection 0.5s;
-            }
-        }
+
+    &__price {
+      width: 10%;
+      font-weight: 700;
+      font-size: 15px;
     }
+  }
+
+  & .plate-selector {
+    height: 100%;
+    line-height: 65px;
+    width: 0%;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    background-color: $tertiary;
+    transition: 0.5s;
+  }
+
+  &:hover {
+    & > .plate {
+      width: 75%;
+      transition: width 0.5s;
+    }
+    & > .plate-selector {
+      width: 17%;
+      transition: width 0.5s;
+      transition-delay: 0.1s;
+      & > i {
+        animation: plate-selection 0.5s;
+      }
+    }
+  }
 }
-        
+
 /* Dish, desserts and command button */
 
-.dish{
-    @extend .starter;
-    animation: apparition 1s 0.5s forwards;
+.dish {
+  @extend .starter;
+  animation: apparition 1s 0.5s forwards;
 }
 
-.dessert{
-    @extend .starter;
-    animation: apparition 1s 1s forwards;
+.dessert {
+  @extend .starter;
+  animation: apparition 1s 1s forwards;
 }
 
-.button{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 50px;
+.button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
 
-    & .btn{
-        text-align: center;
-        width: 200px;
-        margin: 0;
-    }
+  & .btn {
+    text-align: center;
+    width: 200px;
+    margin: 0;
+  }
 }

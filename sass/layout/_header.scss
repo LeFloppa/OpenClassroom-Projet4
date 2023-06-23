@@ -4,6 +4,14 @@ header {
   grid-template-columns: 1fr 2fr 7fr 3fr;
   padding: 15px 0;
 
+  @include tablet {
+    padding: 23px 0;
+  }
+
+  @include laptop {
+    padding: 30px 0;
+  }
+
   a {
     display: flex;
     grid-column-start: 2;

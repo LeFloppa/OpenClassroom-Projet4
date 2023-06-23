@@ -6,6 +6,18 @@
   width: 100%;
   height: 1100px;
 
+  @include tablet {
+    height: 100%;
+    gap: 20px;
+  }
+
+  @include desktop {
+    height: 100%;
+    width: 65%;
+    margin: auto;
+    gap: 30px;
+  }
+
   &__restaurant {
     display: flex;
     flex-direction: column;
@@ -13,6 +25,14 @@
     height: 250px;
     box-shadow: 0px 3px 15px darken(#ffffff, 10);
     border-radius: 20px;
+
+    @include tablet {
+      width: 48%;
+    }
+
+    @include desktop {
+      width: 48%;
+    }
 
     &__link {
       width: 100%;
@@ -74,6 +94,11 @@
     font-size: 24px;
     font-weight: 700;
     margin: 20px 0;
+
+    @include desktop {
+      width: 85%;
+      margin: 40px auto 30px;
+    }
   }
 }
 
@@ -89,4 +114,24 @@
   border-radius: 2px;
   bottom: 220px;
   left: 78%;
+
+  @media screen and (min-width: 425px) {
+    left: 80%;
+  }
+
+  @media screen and (min-width: 576px) {
+    left: 85%;
+  }
+
+  @include tablet {
+    left: 75%;
+  }
+
+  @include laptop {
+    left: 80%;
+  }
+
+  @include desktop {
+    left: 65%;
+  }
 }

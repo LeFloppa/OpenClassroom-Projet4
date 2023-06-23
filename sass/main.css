@@ -257,6 +257,16 @@ header {
   grid-template-columns: 1fr 2fr 7fr 3fr;
   padding: 15px 0;
 }
+@media screen and (min-width: 768px) {
+  header {
+    padding: 23px 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    padding: 30px 0;
+  }
+}
 header a {
   display: flex;
   grid-column-start: 2;
@@ -281,11 +291,34 @@ footer {
   padding: 20px 15px 30px 25px;
   margin-top: auto;
 }
+@media screen and (min-width: 1280px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 30px;
+  }
+}
 footer h4 {
   color: white;
   font-family: "Shrikhand";
   font-size: 18px;
   padding-bottom: 15px;
+}
+@media screen and (min-width: 1280px) {
+  footer h4 {
+    padding-bottom: 0;
+    padding-right: 80px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
 footer ul li {
   padding: 5px 0;
@@ -318,6 +351,21 @@ main {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (min-width: 768px) {
+  .background {
+    height: 321px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .background {
+    height: 372px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .background {
+    height: 423px;
+  }
+}
 
 /* Menu */
 .menu {
@@ -339,10 +387,30 @@ main {
   width: 307px;
   margin: 30px auto 0;
 }
+@media screen and (min-width: 768px) {
+  .menu__title {
+    width: 42%;
+  }
+}
 .menu h1 {
   width: 90%;
   font-family: "Shrikhand";
   font-size: 26px;
+}
+@media screen and (min-width: 350px) {
+  .menu h1 {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu h1 {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu h1 {
+    width: 75%;
+  }
 }
 
 /* Starter */
@@ -398,6 +466,11 @@ main {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+@media screen and (min-width: 350px) {
+  .menu-card .plate h3 {
+    font-size: 18px;
+  }
+}
 .menu-card .plate__details {
   width: 85%;
   height: 25px;
@@ -406,6 +479,11 @@ main {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+@media screen and (min-width: 350px) {
+  .menu-card .plate__details {
+    font-size: 15px;
+  }
 }
 .menu-card .plate__price {
   width: 10%;
@@ -508,6 +586,11 @@ main {
   font-weight: 700;
   margin-bottom: 30px;
 }
+@media screen and (min-width: 1280px) {
+  .site-description h1 {
+    font-size: 40px;
+  }
+}
 .site-description p {
   font-size: 18px;
   font-weight: 300;
@@ -519,6 +602,13 @@ main {
   width: 100%;
   height: 400px;
   padding: 20px;
+}
+@media screen and (min-width: 1280px) {
+  .fonctionnement {
+    height: 250px;
+    width: 85%;
+    margin: auto;
+  }
 }
 .fonctionnement h2 {
   font-size: 24px;
@@ -534,6 +624,11 @@ main {
   width: 100%;
   height: 100%;
 }
+@media screen and (min-width: 1280px) {
+  .fonctionnement__cartes {
+    justify-content: space-around;
+  }
+}
 .fonctionnement__cartes__etapes {
   display: flex;
   justify-content: space-between;
@@ -542,6 +637,11 @@ main {
   background-color: #f2f2f2;
   border-radius: 20px;
   box-shadow: 4px 0px 15px #d9d9d9;
+}
+@media screen and (min-width: 1280px) {
+  .fonctionnement__cartes__etapes {
+    width: 30%;
+  }
 }
 .fonctionnement__cartes__etapes span {
   position: relative;
@@ -577,6 +677,20 @@ main {
   width: 100%;
   height: 1100px;
 }
+@media screen and (min-width: 768px) {
+  .cards {
+    height: 100%;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .cards {
+    height: 100%;
+    width: 65%;
+    margin: auto;
+    gap: 30px;
+  }
+}
 .cards__restaurant {
   display: flex;
   flex-direction: column;
@@ -584,6 +698,16 @@ main {
   height: 250px;
   box-shadow: 0px 3px 15px #e6e6e6;
   border-radius: 20px;
+}
+@media screen and (min-width: 768px) {
+  .cards__restaurant {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .cards__restaurant {
+    width: 48%;
+  }
 }
 .cards__restaurant__link {
   width: 100%;
@@ -640,6 +764,12 @@ main {
   font-weight: 700;
   margin: 20px 0;
 }
+@media screen and (min-width: 1280px) {
+  .restaurants h2 {
+    width: 85%;
+    margin: 40px auto 30px;
+  }
+}
 
 .cards__restaurant .new {
   position: relative;
@@ -653,4 +783,29 @@ main {
   border-radius: 2px;
   bottom: 220px;
   left: 78%;
+}
+@media screen and (min-width: 425px) {
+  .cards__restaurant .new {
+    left: 80%;
+  }
+}
+@media screen and (min-width: 576px) {
+  .cards__restaurant .new {
+    left: 85%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .cards__restaurant .new {
+    left: 75%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cards__restaurant .new {
+    left: 80%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .cards__restaurant .new {
+    left: 65%;
+  }
 }/*# sourceMappingURL=main.css.map */
