@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap"); /* Heart */
-@keyframes heart {
+@keyframes heart-fill {
   from {
     background-position-y: 24px;
     -webkit-text-stroke-width: 1px;
@@ -7,6 +7,16 @@
   to {
     background-position-y: 0;
     -webkit-text-stroke-width: 0px;
+  }
+}
+@keyframes heart-empty {
+  from {
+    background-position-y: 0;
+    -webkit-text-stroke-width: 0px;
+  }
+  to {
+    background-position-y: 24px;
+    -webkit-text-stroke-width: 1px;
   }
 }
 /* Menus */
@@ -196,7 +206,7 @@ input {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 html {
@@ -244,11 +254,12 @@ button {
   background-repeat: no-repeat;
   background-position-y: 24px;
   -webkit-text-stroke: 1px #000;
+  animation: heart-empty 0.5s linear;
 }
 .like .fa-heart:hover {
   background-position-y: 0;
   -webkit-text-stroke-width: 0px;
-  animation: heart 0.5s linear forwards;
+  animation: heart-fill 0.5s linear forwards;
 }
 
 header {
